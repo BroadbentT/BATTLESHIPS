@@ -1,2 +1,2 @@
 # Battleships
-Java Batteleships.
+Java Battleships.
