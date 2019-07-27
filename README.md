@@ -1,4 +1,4 @@
-# BATTELSHIPS
+# BATTLESHIPS
 The java version of a famous game.
 
 | LANGUAGE | FILENAME | MD5 Hash |
