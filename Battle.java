@@ -44,7 +44,7 @@ StringX.setGrid(NumLoop, String01);}
 else{StringX.setGrid(NumLoop, ".");}}}
 
 public void setHeader(Battle StringX){
-StringX.setGrid(0, " ");
+StringX.setGrid(0, "  ");
 StringX.setGrid(1, "A");
 StringX.setGrid(2, "B");
 StringX.setGrid(3, "C");
