@@ -5,7 +5,7 @@ The java version of a famous game.
 |------    |------    | -------  |
 | Java | BattleShips.java |  |
 | Java | Battle.java |  |
-| Java | SHips.java | |
+| Java | Ships.java | |
 
 - [x] Tested and working...
 
