@@ -1,27 +1,45 @@
 // *****************************************************************************
-//
-//  JAVA PROGRAMMER TERENCE BROADBENT - B028035c@student.staffs.ac.uk
-//  DATE: 03.03.2014 VERSION 1.0
-//
+//                 JAVA BATTLESHIPS - YOU SUNK MY BATTLESHIP
+//           BY TERENCE BROADBENT BSC CYBER SECURITY (FIRST CLASS)
 // *****************************************************************************
 
-
-
+// ***************************************************************************** 
+// AUTHOR  : Terence Broadbent                                                    
+// CONTRACT: GitHub                                                               
+// Version : 1.0                                                                
+// Details : Load required imports.
+// Modified: N/A
 // *****************************************************************************
-// Call any imports to be used by the program
+
+package BattleShipsProj;
+
+// ***************************************************************************** 
+// AUTHOR  : Terence Broadbent                                                    
+// CONTRACT: GitHub                                                               
+// Version : 1.0                                                                
+// Details : Call any imports to be used by the program.
+// Modified: N/A
 // *****************************************************************************
 
 import java.util.*;
 
-// *****************************************************************************
-// Main - BattleShips Game
+// ***************************************************************************** 
+// AUTHOR  : Terence Broadbent                                                    
+// CONTRACT: GitHub                                                               
+// Version : 1.0                                                                
+// Details : The main program.
+// Modified: N/A
 // *****************************************************************************
 
 public class BattleShips {
 public static void main(String[] args) {
-
-// *****************************************************************************
-// Create the sea geographical area.
+    
+// ***************************************************************************** 
+// AUTHOR  : Terence Broadbent                                                    
+// CONTRACT: GitHub                                                               
+// Version : 1.0                                                                
+// Details : Create and sea geographical area.
+// Modified: N/A
 // *****************************************************************************
 
 Battle Grid00 = new Battle();
@@ -38,8 +56,12 @@ Battle Grid10 = new Battle();
 Battle Grid11 = new Battle();
 Battle Grid12 = new Battle();
 
-// *****************************************************************************
-// Create the battle ships geographical area.
+// ***************************************************************************** 
+// AUTHOR  : Terence Broadbent                                                    
+// CONTRACT: GitHub                                                               
+// Version : 1.0                                                                
+// Details : Create the batlle ships geographical area.
+// Modified: N/A
 // *****************************************************************************
 
 Ships BShip00 = new Ships();
@@ -56,8 +78,12 @@ Ships BShip10 = new Ships();
 Ships BShip11 = new Ships();
 Ships BShip12 = new Ships();
 
-// *****************************************************************************
-// Create the two arrays to hold all the data and other variables
+// ***************************************************************************** 
+// AUTHOR  : Terence Broadbent                                                    
+// CONTRACT: GitHub                                                               
+// Version : 1.0                                                                
+// Details : Create the two arrays to hold all the data and other variables.
+// Modified: N/A
 // *****************************************************************************
 
 Battle[] BattleArray = {Grid00, Grid01, Grid02, Grid03, Grid04, Grid05, Grid06,
@@ -68,10 +94,14 @@ Ships [] ShipArray   = {BShip00, BShip01, BShip02, BShip03, BShip04, BShip05,
                         BShip12};
 int GridX = 0;
 int GridY = 0;
-int NumAllSunk = 25;
+int NumAllSunk = 25; // 5 x 5 battleships.
 
-// *****************************************************************************
-// Populate the battlefield grid with appropriate clean data
+// ***************************************************************************** 
+// AUTHOR  : Terence Broadbent                                                    
+// CONTRACT: GitHub                                                               
+// Version : 1.0                                                                
+// Details : Populate the battlefield grid with appropriate clean data.
+// Modified: N/A
 // *****************************************************************************
 
 Grid00.setHeader(Grid00);
@@ -81,15 +111,23 @@ if (NumLoop < 10){StrString = " " + NumLoop ;}
 if (NumLoop > 9){StrString = NumLoop + "";}
 BattleArray[NumLoop].setGrids(BattleArray[NumLoop], StrString);}
 
-// *****************************************************************************
-// Populate all the ships geographical locations with '0's
+// ***************************************************************************** 
+// AUTHOR  : Terence Broadbent                                                    
+// CONTRACT: GitHub                                                               
+// Version : 1.0                                                                
+// Details : Populate all the ships geographical loccations with '0's.
+// Modified: N/A
 // *****************************************************************************
 
 for (int NumLoop = 0; NumLoop < 13; NumLoop++){
 ShipArray[NumLoop].BShipData(ShipArray[NumLoop], "0");}
 
-// *****************************************************************************
-// Now place the 5 battle ships (length 5) by populating the locations with '1's
+// ***************************************************************************** 
+// AUTHOR  : Terence Broadbent                                                    
+// CONTRACT: GitHub                                                               
+// Version : 1.0                                                                
+// Details : Place 5 battleships by populating their locations with '1's.
+// Modified: N/A
 // *****************************************************************************
 
 for (int NumLoop = 7; NumLoop < 12; NumLoop++){
@@ -104,29 +142,45 @@ ShipArray[NumLoop].setBShip(ShipArray[NumLoop], NumLoop2);}}
 for (int NumLoop = 8; NumLoop < 13;NumLoop++){
 ShipArray[NumLoop].setBShip(ShipArray[NumLoop], 11);}
 
-// *****************************************************************************
-// Now start the Game!!!
+// ***************************************************************************** 
+// AUTHOR  : Terence Broadbent                                                    
+// CONTRACT: GitHub                                                               
+// Version : 1.0                                                                
+// Details : Start the game.
+// Modified: N/A
 // *****************************************************************************
 
 while (NumAllSunk != 0) {                         //End game when all ships sunk
-
-// *****************************************************************************
-// Display the battlefield grid to the player via the screen
+    
+// ***************************************************************************** 
+// AUTHOR  : Terence Broadbent                                                    
+// CONTRACT: GitHub                                                               
+// Version : 1.0                                                                
+// Details : Display the battlefield grid to the player via the screen.
+// Modified: N/A
 // *****************************************************************************
      
 ShowGameHeader();
 for (int NumLoop = 0; NumLoop <13; NumLoop++){
 ShowBattleField(BattleArray[NumLoop]);}
 
-// *****************************************************************************
-// Obtain the x,y coordinates of the shot from the user via the keyboard
+// ***************************************************************************** 
+// AUTHOR  : Terence Broadbent                                                    
+// CONTRACT: GitHub                                                               
+// Version : 1.0                                                                
+// Details : Obtain x,y coordinates from the user via the keyboard.
+// Modified: N/A
 // *****************************************************************************
 
 GridX = GetX(GridX);
 GridY = GetY(GridY);
 
-// *****************************************************************************
-// Refresh the grid data with updated shot for a miss or hit
+// ***************************************************************************** 
+// AUTHOR  : Terence Broadbent                                                    
+// CONTRACT: GitHub                                                               
+// Version : 1.0                                                                
+// Details : Refresh the grid data with updated shot for a miss or hit.
+// Modified: N/A
 // *****************************************************************************
 
 for (int NumLoop = 0; NumLoop < 13; NumLoop++){
@@ -142,8 +196,12 @@ if (GridY == NumLoop && "1".equals(StrCheckData))
 //  End of program - Job well done!
 // *****************************************************************************   
 
-// *****************************************************************************
-// Print the battlefield geographical area to the screen
+// ***************************************************************************** 
+// AUTHOR  : Terence Broadbent                                                    
+// CONTRACT: GitHub                                                               
+// Version : 1.0                                                                
+// Details : Print the battlefield geographical area to the screen.
+// Modified: N/A
 // *****************************************************************************
 
 public static void ShowBattleField(Battle StrString){
